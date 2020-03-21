@@ -1,0 +1,21 @@
+{
+  "name": "light-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "cli.mjs",
+  "dependencies": {
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.comluckydyelight-cli.git"
+  },
+  "keywords": [],
+  "author": "Tim Havlicek",
+  "license": "ISC"
+}
