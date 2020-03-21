@@ -18,13 +18,20 @@ export function command(name, options) {
     Commands[name] = options;
 }
 
-export async function main(command, args) {
+export async function main(command, args, flags = []) {
 
     command = command || process.argv.slice(2)[0];
     args = args || process.argv.slice(3);
 
+    for(let arg of [...args]) {
+        if(arg[0] == "-") {
+            flags.push(arg);
+            args.splice(args.indexOf(arg), 1);
+        }
+    }
+
     if(Commands[command]) {
-        const result = await Commands[command].execute(...args);
+        const result = await Commands[command].execute(args, flags);
         if(!result && Commands[command].usage) {
             log(Commands[command].description);
             log(`Usage: ${chalk.green(Commands[command].usage)}`);

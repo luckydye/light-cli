@@ -2,8 +2,8 @@
   "name": "light-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "module": "cli.mjs",
+  "main": "cli.mjs",
+  "module": "light-cli",
   "dependencies": {
     "chalk": "^3.0.0"
   },
