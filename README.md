@@ -30,3 +30,22 @@ If the "execute" function returns false, the script will log the usage and descr
  
 Flags start with a single "-" and are accessible from the second "flags" argument. 
 All other cli arguments are in the first argument of the execute function as an array.
+
+## Use with NPM
+
+package.json configuration:
+
+```
+// package.json
+{
+    ...
+    "bin": {
+        "command": "scripts/script.mjs"
+    },
+    ...
+}
+```
+
+Then run ```npm install -g``` or ```npm link```.
+
+Now you can use the "command" command in your commandline.
