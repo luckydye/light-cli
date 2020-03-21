@@ -1,3 +1,7 @@
+# light-cli
+
+A simple cli script for simple cli programs.
+
 ## Usage
 
 ```
